@@ -52,6 +52,25 @@ function draw() {
     fill(0,0,0);
     textSize(20)
   noStroke();
+  if(scoreTracker == winningScore) {
+    fill(0,0,0);
+    textSize(45);
+    text("You win!", 30,100);
+    textSize(25)
+    text("click the screen to play again", 30,200);
+    // throw the apple to the right of the canvas to hide it and make it stop
+meteorX = 500;
+meteorY = 0;
+meteorSpeed = 0;
+print("You've won!");
+    
+    // Check to see if someone is clicking the screen if someone has clicked the screen, restart the game
+      if(mouseIsPressed === true) {
+        print("You clicked the screen!");
+        resetGame();
+      }
+    
+  }
   // draws which image??? from the center the catcher or the eteor?  // add meteor
   //fill(mr,mg,mb);                                //ellipse(meteorX,meteorY,meteorDiameter,meteorDiameter);
   // show image of an apple as the meteor
